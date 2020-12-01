@@ -265,7 +265,6 @@ img {
 .contacts .social-link {
   display: flex;
   justify-content: center;
-  margin-left: 4px;
 }
 
 .social-link .social-item:not(:last-child) {
