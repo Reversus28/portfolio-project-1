@@ -232,8 +232,14 @@ img {
   margin-bottom: 20px;
 }
 
+.contacts .action {
+  max-width: 275px;
+  margin: 0 auto 30px;
+}
+
 .contacts .button {
   padding: 13px 30px;
+  margin-bottom: 85px;
 
   color: #ffffff;
 
@@ -242,10 +248,37 @@ img {
   border-radius: 25px;
 }
 
-.contacts .action {
-  max-width: 275px;
-  background-color: aqua;
-  margin: 0 auto;
+.contacts .social-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.social-list .social-item:not(:last-child) {
+  margin-right: 60px;
 }
 
+.contacts .action-link {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.contacts .social-link {
+  display: flex;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.social-link .social-item:not(:last-child) {
+  margin-left: 4px;
+}
+
+.social-link .link {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.social-link .link:hover,
+.social-link .link:focus {
+  color: var(--primary-text-color);
+}
 /*=========== END FOOTER ===========*/
