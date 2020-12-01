@@ -269,7 +269,7 @@ img {
 }
 
 .social-link .social-item:not(:last-child) {
-  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .social-link .link {
