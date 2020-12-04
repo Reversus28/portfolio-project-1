@@ -158,6 +158,7 @@ img {
 /*=========== END ABOUT ===========*/
 
 /*=========== SKILLS ===========*/
+
 .skills .section-title {
   margin-bottom: 70px;
 }
@@ -179,10 +180,6 @@ img {
   align-items: center;
 }
 
-.skills-item .skills-logo {
-  margin-bottom: 23px;
-}
-
 .skills-item .skills-tool {
   margin-bottom: 40px;
 
@@ -190,6 +187,31 @@ img {
   vertical-align: top;
   font-size: 14px;
   color: var(--secondary-text-color);
+}
+
+.skills-item::before {
+  content: '';
+  width: 90px;
+  height: 90px;
+  margin-bottom: 23px;
+  background-repeat: no-repeat;
+}
+
+.skills-item.illustrator::before {
+  background-image: url(../images/photoshop.svg);
+}
+
+.skills-item.photoshop::before {
+  background-image: url(../images/illustrator.svg);
+}
+
+.skills-item.after-effects::before {
+  background-image: url(../images/after-effects.svg);
+}
+
+.skills-item.figma::before {
+  width: 59px;
+  background-image: url(../images/figma.svg);
 }
 /*=========== END SKILLS ===========*/
 
