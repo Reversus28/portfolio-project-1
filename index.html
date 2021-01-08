@@ -3,149 +3,222 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
-      integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Designer</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header-navigation container">
-        <ul class="navigation-list list">
-          <li class="navigation-item">
-            <a href="#hero" class="link active">Home</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#about" class="link">About me</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#skills" class="link">Skills</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#portfolio" class="link">Portfolio</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#contacts" class="link">Contacts</a>
-          </li>
-        </ul>
+    <header class="page-header">
+      <nav class="page-header__nav is-hidden" data-modal>
+        <div class="container page-header__container">
+          <button
+            type="button"
+            class="page-header__button-close"
+            data-modal-close
+          >
+            <svg width="33" height="20" class="page-header__icon-close">
+              <use href="./images/sprite-icon.svg#menu-close"></use>
+            </svg>
+          </button>
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a
+                href="#hero"
+                class="page-header__link page-header__link--active link"
+                >Home</a
+              >
+            </li>
+            <li class="page-header__item">
+              <a href="#about" class="page-header__link link">About me</a>
+            </li>
+            <li class="page-header__item">
+              <a href="#skills" class="page-header__link link">Skills</a>
+            </li>
+            <li class="page-header__item">
+              <a href="#portfolio" class="page-header__link link">Portfolio</a>
+            </li>
+            <li class="page-header__item">
+              <a href="#contacts" class="page-header__link link">Contacts</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-    </header>
-    <main>
-      <section class="hero section" id="hero">
-        <div class="container">
-          <div class="hero-designer">
-            <h1 class="designer-name">Denis <br />Novik</h1>
-            <p class="designer-about">
-              UX | UI designer <br />24 years old, Minsk
+      <section id="hero" class="hero">
+        <div class="container hero__container">
+          <button type="button" class="hero__button" data-modal-open>
+            <svg width="33" height="20" class="hero__icon">
+              <use href="./images/sprite-icon.svg#menu"></use>
+            </svg>
+          </button>
+          <div class="hero__top">
+            <h1 class="hero__name">Denis Novik</h1>
+            <p class="hero__description">
+              UX | UI designer 24 years old, Minsk
             </p>
-            <ul class="site-lang list">
-              <li class="lang-item"><a href="" class="link  ">ru</a></li>
-              <li class="lang-item"><a href="" class="link active">eng</a></li>
+            <ul class="hero__lang list">
+              <li class="hero__lang-item">
+                <a href="" class="hero__lang-link link">RU</a>
+              </li>
+              <li class="hero__lang-item">
+                <a href="" class="hero__lang-link hero__lang-link--active link"
+                  >ENG</a
+                >
+              </li>
             </ul>
           </div>
-          <img
-            src="./images/Hero.jpg"
-            alt="in the picture Denis Novik"
-            width="944"
-            height="387"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/hero/hero-943.jpg  1x,
+                ./images/desktop/hero/hero-1886.jpg 2x
+              "
+              type="image/jpg"
+              media="(min-width:970px)" />
+
+            <source
+              srcset="
+                ./images/mobile/hero/hero-316.jpg 1x,
+                ./images/mobile/hero/hero-632.jpg 2x
+              "
+              type="image/jpg"
+              media="(max-width:969px)" />
+
+            <img
+              src="./images/desktop/hero/hero-943.jpg"
+              class="hero__image"
+              alt="Denis Novik"
+          /></picture>
         </div>
       </section>
-      <section class="about section" id="about">
+    </header>
+    <main>
+      <section id="about" class="about section">
         <div class="container">
           <h2 class="section-title">About me</h2>
-          <p class="section-description">
-            Hi, I'm Denis – UX/UI designer from Minsk. <br />
-            I'm interested in design and everything connected with it.
-          </p>
-          <p class="section-description">
-            I'm studying at courses "Web and mobile design interfaces" in
-            IT-Academy.
-          </p>
-          <p class="section-description">
-            Ready to implement excellent projects <br />
-            with wonderful people.
-          </p>
+          <ul class="about__list">
+            <li class="about__item">
+              Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in
+              design and everything connected with it.
+            </li>
+            <li class="about__item">
+              I'm studying at courses "Web and mobile design interfaces" in
+              IT-Academy.
+            </li>
+            <li class="about__item">
+              Ready to implement excellent projects with wonderful people.
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="skills section" id="skills">
+      <section id="skills" class="skills section">
         <div class="container">
           <h2 class="section-title">Skills</h2>
-          <p class="section-description">I work in such programs as</p>
-          <ul class="skills-list list">
-            <li class="skills-item photoshop">
-              <p class="skills-tool">
-                Adobe <br />
-                Photoshop
-              </p>
-              <svg width="166" height="26">
+          <p class="skills__description">I work in such programs as</p>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <p class="skills__title">Adobe Photoshop</p>
+              <svg width="166" height="26" class="skills__icon">
                 <use href="./images/sprite-icon.svg#icon-star-4"></use>
               </svg>
             </li>
-            <li class="skills-item illustrator">
-              <p class="skills-tool">
-                Adobe <br />
-                Illustrator
-              </p>
-              <svg width="166" height="26">
+            <li class="skills__item">
+              <p class="skills__title">Adobe Illustrator</p>
+              <svg width="166" height="26" class="skills__icon">
                 <use href="./images/sprite-icon.svg#icon-star-3"></use>
               </svg>
             </li>
-            <li class="skills-item after-effects">
-              <p class="skills-tool">
-                Adobe <br />
-                After Effects
-              </p>
-              <svg width="166" height="26">
+            <li class="skills__item">
+              <p class="skills__title">Adobe After Effects</p>
+              <svg width="166" height="26" class="skills__icon">
                 <use href="./images/sprite-icon.svg#icon-star-4"></use>
               </svg>
             </li>
-            <li class="skills-item figma">
-              <p class="skills-tool">Figma</p>
-              <svg width="166" height="26">
+            <li class="skills__item">
+              <p class="skills__title">Figma</p>
+              <svg width="166" height="26" class="skills__icon">
                 <use href="./images/sprite-icon.svg#icon-star-4"></use>
               </svg>
             </li>
           </ul>
         </div>
       </section>
-      <section class="portfolio section" id="portfolio">
+      <section id="portfolio" class="portfolio section">
         <div class="container">
           <h2 class="section-title">Portfolio</h2>
-          <ul class="portfolio-list list">
-            <li class="portfolio-item">
-              <img
-                src="./images/work-examples/work-1.jpg"
-                alt="site fashion store"
-                width="936"
-                height="522"
-                class="portfoli-examples"
-              /><a href="" class="examples-page"
+          <ul class="portfolio__list">
+            <li class="portfolio__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/work-examples/work-1-936.jpg  1x,
+                    ./images/desktop/work-examples/work-1-1872.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(min-width:970px)"
+                />
+                <source
+                  srcset="./images/mobile/work-examples/work-1-632.jpg 2x"
+                  type="image/jpg"
+                  media="(max-width:969px)"
+                />
+                <img
+                  src="./images/mobile/work-examples/work-1-316.jpg"
+                  alt="Homepage fashion store"
+                />
+              </picture>
+              <a href="" class="portfolio__link"
                 >Online fashion store - Homepage</a
               >
             </li>
-            <li class="portfolio-item">
-              <img
-                src="./images/work-examples/work-2.jpg"
-                alt="site Reebok store"
-                width="936"
-                height="522"
-                class="portfoli-examples"
-              /><a href="" class="examples-page">Reebok Store - Concept</a>
+            <li class="portfolio__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/work-examples/work-2-936.jpg  1x,
+                    ./images/desktop/work-examples/work-2-1872.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(min-width:970px)"
+                />
+                <source
+                  srcset="./images/mobile/work-examples/work-2-632.jpg 2x"
+                  type="image/jpg"
+                  media="(max-width:969px)"
+                />
+                <img
+                  src="./images/mobile/work-examples/work-2-316.jpg"
+                  alt="Homepage fashion store"
+                />
+              </picture>
+              <a href="" class="portfolio__link">Reebok Store - Concept</a>
             </li>
-            <li class="portfolio-item">
-              <img
-                src="./images/work-examples/work-3.jpg"
-                alt="site Braun Landing Page"
-                width="936"
-                height="522"
-                class="portfoli-examples"
-              /><a href="" class="examples-page"
+            <li class="portfolio__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/work-examples/work-3-936.jpg  1x,
+                    ./images/desktop/work-examples/work-3-1872.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(min-width:970px)"
+                />
+                <source
+                  srcset="./images/mobile/work-examples/work-3-632.jpg 2x"
+                  type="image/jpg"
+                  media="(max-width:969px)"
+                />
+                <img
+                  src="./images/mobile/work-examples/work-3-316.jpg"
+                  alt="Homepage fashion store"
+                />
+              </picture>
+              <a href="" class="portfolio__link"
                 >Braun Landing Page - Concept</a
               >
             </li>
@@ -153,101 +226,60 @@
         </div>
       </section>
     </main>
-    <footer class="contacts section" id="contacts">
+    <footer id="contacts" class="contacts section">
       <div class="container">
         <h2 class="section-title">Contacts</h2>
-        <p class="action">Want to know more or just chat? You are welcome!</p>
-        <button type="button" class="button">Send message</button>
-        <ul class="social-list list">
-          <li class="social-item">
-            <a
-              href="https://www.linkedin.com/"
-              rel="noreferrer noopener"
-              target="_blank"
-              class="link"
-            >
+        <p class="contacts__description">
+          Want to know more or just chat? You are welcome!
+        </p>
+        <button type="button" class="contacts__button">Send message</button>
+        <ul class="contacts__social-list">
+          <li class="contacts__social">
+            <a href="" class="contacts__social">
               <svg width="40" height="40">
                 <use href="./images/sprite-icon.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
-          <li class="social-item">
-              <a
-              href="https://www.instagram.com/?hl=ru"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              > 
-            <svg width="40" height="40">
-              <use href="./images/sprite-icon.svg#icon-instagram"></use>
-            </svg>
-          </li>
-          <li class="social-item">
-                <a
-              href="https://www.behance.net"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              > 
-            <svg width="40" height="40">
-              <use href="./images/sprite-icon.svg#icon-behance"></use>
-            </svg>
+          <li class="contacts__social">
+            <a href="" class="contacts__link">
+              <svg width="40" height="40">
+                <use href="./images/sprite-icon.svg#icon-instagram"></use>
+              </svg>
             </a>
           </li>
-          <li class="social-item">
-               <a
-              href="https://dribbble.com/"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              > 
-            <svg width="40" height="40">
-              <use href="./images/sprite-icon.svg#icon-dribbble"></use>
-            </svg>
-            </a
-            >
+          <li class="contacts__social">
+            <a href="" class="contacts__link">
+              <svg width="40" height="40">
+                <use href="./images/sprite-icon.svg#icon-behance"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__social">
+            <a href="" class="contacts__link">
+              <svg width="40" height="40">
+                <use href="./images/sprite-icon.svg#icon-dribbble"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <p class="action-link">Like me on</p>
-        <ul class="social-link list">
-          <li class="social-item">
-            <a
-              href="https://www.linkedin.com/"
-              rel="noreferrer noopener"
-              target="_blank"
-              class="link"
-              >LinkedIn,
-            </a>
+        <p class="contacts__like">Like me on</p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a href="" class="contacts__link link">LinkedIn, </a>
           </li>
-          <li class="social-item">
-            <a
-              href="https://www.instagram.com/?hl=ru"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              >Instagram,
-            </a>
+          <li class="contacts__item">
+            <a href="" class="contacts__link link">Instagram, </a>
           </li>
-          <li class="social-item">
-            <a
-              href="https://www.behance.net"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              >Behance,
-            </a>
+          <li class="contacts__item">
+            <a href="" class="contacts__link link">Behance, </a>
           </li>
-          <li class="social-item">
-            <a
-              href="https://dribbble.com/"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="link"
-              >Dribble</a
-            >
+          <li class="contacts__item">
+            <a href="" class="contacts__link link">Dribble</a>
           </li>
         </ul>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
